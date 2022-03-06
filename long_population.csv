@@ -1,0 +1,154 @@
+State,condition,measure
+Alabama,population,29782365
+Alabama,employment_rate,0.61
+Alabama,number_colleges,1898
+Alaska,population,7843489
+Alaska,employment_rate,0.89
+Alaska,number_colleges,1375
+Arizona,population,13881560
+Arizona,employment_rate,0.29
+Arizona,number_colleges,258
+Arkansas,population,6550014
+Arkansas,employment_rate,0.41
+Arkansas,number_colleges,1580
+California,population,26297974
+California,employment_rate,0.89
+California,number_colleges,130
+Colorado,population,26857590
+Colorado,employment_rate,0.45
+Colorado,number_colleges,1205
+Connecticut,population,2153453
+Connecticut,employment_rate,0.62
+Connecticut,number_colleges,1783
+Delaware,population,12239097
+Delaware,employment_rate,0.27
+Delaware,number_colleges,964
+District of Columbia,population,11872901
+District of Columbia,employment_rate,0.75
+District of Columbia,number_colleges,1856
+Florida,population,8139044
+Florida,employment_rate,0.33
+Florida,number_colleges,625
+Georgia,population,2740513
+Georgia,employment_rate,0.35
+Georgia,number_colleges,293
+Hawaii,population,19481305
+Hawaii,employment_rate,0.7
+Hawaii,number_colleges,1665
+Idaho,population,12352375
+Idaho,employment_rate,0.9
+Idaho,number_colleges,532
+Illinois,population,9108870
+Illinois,employment_rate,0.2
+Illinois,number_colleges,1331
+Indiana,population,16675208
+Indiana,employment_rate,0.67
+Indiana,number_colleges,373
+Iowa,population,13635426
+Iowa,employment_rate,0.84
+Iowa,number_colleges,1240
+Kansas,population,26019239
+Kansas,employment_rate,0.46
+Kansas,number_colleges,1006
+Kentucky,population,28125163
+Kentucky,employment_rate,0.59
+Kentucky,number_colleges,235
+Louisiana,population,7400812
+Louisiana,employment_rate,0.79
+Louisiana,number_colleges,1338
+Maine,population,4671596
+Maine,employment_rate,0.75
+Maine,number_colleges,623
+Maryland,population,13339368
+Maryland,employment_rate,0.66
+Maryland,number_colleges,1477
+Massachusetts,population,10802407
+Massachusetts,employment_rate,0.26
+Massachusetts,number_colleges,769
+Michigan,population,25516028
+Michigan,employment_rate,0.62
+Michigan,number_colleges,1238
+Minnesota,population,24195014
+Minnesota,employment_rate,0.68
+Minnesota,number_colleges,519
+Mississippi,population,26055789
+Mississippi,employment_rate,0.54
+Mississippi,number_colleges,710
+Missouri,population,24356674
+Missouri,employment_rate,0.83
+Missouri,number_colleges,905
+Montana,population,5955554
+Montana,employment_rate,0.26
+Montana,number_colleges,1235
+Nebraska,population,21465126
+Nebraska,employment_rate,0.53
+Nebraska,number_colleges,1871
+Nevada,population,10861799
+Nevada,employment_rate,0.44
+Nevada,number_colleges,1379
+New Hampshire,population,23705500
+New Hampshire,employment_rate,0.31
+New Hampshire,number_colleges,755
+New Jersey,population,14428400
+New Jersey,employment_rate,0.59
+New Jersey,number_colleges,508
+New Mexico,population,14812069
+New Mexico,employment_rate,0.2
+New Mexico,number_colleges,1337
+New York,population,18461573
+New York,employment_rate,0.45
+New York,number_colleges,104
+North Carolina,population,5014376
+North Carolina,employment_rate,0.64
+North Carolina,number_colleges,1017
+North Dakota,population,11521688
+North Dakota,employment_rate,0.77
+North Dakota,number_colleges,828
+Ohio,population,26929341
+Ohio,employment_rate,0.34
+Ohio,number_colleges,1494
+Oklahoma,population,4627274
+Oklahoma,employment_rate,0.29
+Oklahoma,number_colleges,634
+Oregon,population,1192110
+Oregon,employment_rate,0.39
+Oregon,number_colleges,1304
+Pennsylvania,population,15226641
+Pennsylvania,employment_rate,0.26
+Pennsylvania,number_colleges,1064
+Rhode Island,population,10909890
+Rhode Island,employment_rate,0.54
+Rhode Island,number_colleges,305
+South Carolina,population,28823057
+South Carolina,employment_rate,0.34
+South Carolina,number_colleges,1206
+South Dakota,population,8495272
+South Dakota,employment_rate,0.35
+South Dakota,number_colleges,203
+Tennessee,population,16560088
+Tennessee,employment_rate,0.84
+Tennessee,number_colleges,401
+Texas,population,19804479
+Texas,employment_rate,0.55
+Texas,number_colleges,1801
+Utah,population,28364139
+Utah,employment_rate,0.31
+Utah,number_colleges,918
+Vermont,population,25361328
+Vermont,employment_rate,0.64
+Vermont,number_colleges,1238
+Virginia,population,29538633
+Virginia,employment_rate,0.88
+Virginia,number_colleges,1474
+Washington,population,7685583
+Washington,employment_rate,0.54
+Washington,number_colleges,1660
+West Virginia,population,24811601
+West Virginia,employment_rate,0.34
+West Virginia,number_colleges,1591
+Wisconsin,population,23271620
+Wisconsin,employment_rate,0.27
+Wisconsin,number_colleges,729
+Wyoming,population,21559004
+Wyoming,employment_rate,0.67
+Wyoming,number_colleges,1366
