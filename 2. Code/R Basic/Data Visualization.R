@@ -7,7 +7,6 @@ library(readr)
 # barplot is used for discrete variable, 
 # and histagramplot is used for continous variable
 
-
 acs = read.csv('acs.csv')
 str(acs)
 names(acs)
@@ -36,7 +35,6 @@ acs$female = factor(acs$female)
 levels(acs$edu)
 levels(acs$female)
 
-
 set.seed(123)
 acs_sample = acs[sample(1:nrow(acs), 300), ] %>%
   filter(!is.na(edu), !is.na(income))
@@ -63,7 +61,6 @@ acs %>%
   geom_bar() +
   coord_flip()
 
-
 # 3.2. Continuous variable
 # 3.2.1. Histograms
 ggplot(acs, aes(x = age)) +
@@ -73,10 +70,8 @@ ggplot(acs, aes(x = age)) +
   geom_histogram(binwidth = 5,fill = 'red', color = 'white')
 
 # 3.2.2. Density plot
-
 ggplot(acs, aes(x = age)) +
   geom_density()
-
 
 ggplot(acs, aes(x = age)) +
   geom_density(adjust = .5, fill = 'pink', color = 'red')
@@ -92,7 +87,7 @@ acs %>%
   group_by(edu) %>%
   summarize(income = mean(income, na.rm = T)) %>%
   ggplot(aes(x = edu, y = income)) +
-  # geom_bar(stat = 'indentity') + 
+  # geom_bar(stat = 'identity') + 
   geom_col() + # default stat is indentity
   geom_text(aes(label = round(income,1)),vjust = -0.5)
 
@@ -106,7 +101,6 @@ acs %>%
   coord_flip() +
   geom_text(aes(label = round(income)),hjust = -0.1)
 
-
 acs %>%
   filter(!is.na(edu)) %>%
   group_by(edu) %>%
@@ -118,7 +112,6 @@ acs %>%
   ylim(c(0, 75000))
 
 # Boxplots
-
 acs %>%
   filter(!is.na(edu), !is.na(income)) %>%
   ggplot(aes(x = edu, y = income)) +
@@ -127,7 +120,6 @@ acs %>%
 
 # Two continuous variables
 # Scatter plot
-
 ggplot(acs, aes(x = age, y = income)) +
   geom_point()
 
@@ -136,7 +128,6 @@ ggplot(acs, aes(x = age, y = income)) +
 
 # Two discrete variables
 # Barplots
-
 ggplot(acs, aes(x = race, fill = edu)) + #race + edu: 2 discrete variables
   geom_bar(position = "dodge")
 
@@ -158,7 +149,6 @@ acs %>%
   ggplot(aes(x = race, y = perc)) +
   geom_bar(stat = "identity")
 
-
 acs %>%
   group_by(race, edu) %>%
   summarize(n = n()) %>%
@@ -179,7 +169,6 @@ acs %>%
   ylim(c(0, 90)) +
   geom_text(aes(label = round(perc, 1)), hjust = -.1)
 
-
 # Add color
 acs %>%
   filter(!is.na(edu)) %>%
@@ -192,7 +181,6 @@ acs %>%
   coord_flip() +
   ylim(c(0, 90)) +
   geom_text(aes(label = round(perc, 1)), hjust = -.1)
-
 
 # Remove the not-so-needed legend
 acs %>%
@@ -209,12 +197,70 @@ acs %>%
 
 
 
+ggplot(acs_sample, aes(x = age, y= income)) +
+  geom_point() +
+  facet_wrap(~edu, nrow =1)
 
 
+# facet_grid(row~col)
+ggplot(acs_sample, aes(x = age, y= income)) +
+  geom_point() +
+  facet_grid(edu~female)
 
 
+female.label = c('0' = 'male', '1' = 'female')
+ggplot(acs_sample, aes(x = age, y= income)) +
+  geom_point() +
+  facet_grid(female~edu, labeller = labeller(female = female.label))
 
 
+ggplot(acs_sample, aes(x = age, y= income)) +
+  geom_point() +
+  facet_grid(female~edu, labeller = labeller(female = label_both, edu = label_value))
 
 
+ggplot(acs_sample, aes(x = age, y= income)) +
+  geom_point() +
+  scale_color_manual(values = c('0' = 'seagreen3', '1' = 'red2'))
 
+
+ggplot(acs_sample, aes(x = age, y = income,
+                       shape = as.factor(female))) +
+  geom_point() +
+  labs(title = "Income by Age, Sex, and Education",
+       caption = "Random sample of\nACS Dataset",
+       x = "Age",
+       y = "Income (in US Dollars)",
+       shape = "Sex") +
+  facet_wrap(~ edu) +
+  scale_shape_discrete(labels = c("Male", "Female"))
+
+
+ggplot(acs_sample, aes(x = age, y = income,
+                       color = as.factor(female))) +
+  geom_point() +
+  labs(title = "Income by Age, Sex, and Education",
+       caption = "Random sample of\nACS Dataset",
+       x = "Age",
+       y = "Income (in US Dollars)",
+       color='gender') +
+  facet_wrap(~ edu) +
+  scale_color_discrete(labels = c("Male", "Female"))
+
+
+ggplot(acs_sample, aes(x = age, y = income,
+                       shape = as.factor(female))) +
+  geom_point() +
+  labs(title = "Income by Age, Sex, and Education",
+       caption = "Random sample of\nACS Dataset",
+       x = "Age",
+       y = "Income (in US Dollars)",
+       shape = "Sex") +
+  facet_wrap(~ edu) +
+  scale_shape_discrete(labels = c("Male", "Female")) +
+  theme(axis.title.x = element_text(size = 10, face = "italic"),
+        axis.title.y = element_text(size = 25, face = "bold"),
+        axis.text.y = element_text(angle = 20),
+        legend.position = "bottom",
+        plot.title = element_text(angle = 15, vjust = .2)) +
+  scale_x_continuous(breaks = seq(0, 100, 20))
